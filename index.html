@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D Minecraft</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="gameStyle/Home.css">
+    <link rel="stylesheet" href="gameStyle/game.css">
+
+</head>
+<body>
+
+    <div id="welcome-screen">
+        <h1 class="main-title">2D Minecraft</h1>
+        <p class="subtitle">MINE BLOCKS, COLLECT RESOURCES, AND BUILD YOUR WORLD IN THIS SIMPLIFIED 2D SANDBOX GAME.</p>
+        
+   
+
+        <div class="how-to-play-box">
+            <h3>HOW TO PLAY</h3>
+            <ul>
+                <li>🪓 <span>AXE</span> — CHOPS TREES</li>
+                <li>⛏ <span>PICKAXE</span> — BREAKS ROCKS</li>
+                <li>🧹 <span>SHOVEL</span> — DIGS DIRT & GRASS</li>
+                <li>📦 CLICK <span>INVENTORY ITEMS</span> TO PLACE THEM BACK</li>
+                <li>🔄 <span>RESET</span> TO START FRESH</li>
+            </ul>
+        </div>
+
+        <button id="play-button">START GAME</button>
+    </div>
+
+    <!-- Game Screen -->
+<div id="game-screen" style="display: none;">   <!-- Game screen is hidden by default, shown when "START GAME" is clicked -->
+    <div class="game-header">
+        <h2 class="game-title">2D Minecraft</h2>
+        <button id="menu-btn">← MENU</button>
+    </div>
+
+    <div class="controls-bar">
+        <span>TOOLS:</span>
+        <div class="tools-container">
+            <div class="tool-btn" id="axe-tool">🪓 AXE</div>
+            <div class="tool-btn" id="pickaxe-tool">⛏ PICKAXE</div>
+            <div class="tool-btn" id="shovel-tool">🧹 SHOVEL</div>
+        </div>
+        <button id="reset-btn">RESET</button>
+    </div>
+
+    <div id="game-grid"></div>
+
+    <div id="inventory-container">
+        <h3>INVENTORY</h3>
+        <div id="inventory-list" class="inventory-list"></div>
+    </div>
+</div>
+
+    <script type="module" src="Minecraft.js/main.js"></script>
+   
+</body>
+</html>

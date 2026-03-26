@@ -1,0 +1,279 @@
+/* --- MAIN GAME CONTAINER --- */
+#game-screen {
+    background-color: #1a1510; /* Dark brown background from your image */
+    color: #a39485;
+    font-family: 'Press Start 2P', cursive; /* Match the pixel font */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- HEADER AREA --- */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.game-title {
+    color: #76ba3f; /* Minecraft Green */
+    font-size: 24px;
+}
+
+#menu-btn {
+    background-color: #3d2e23;
+    color: #a39485;
+    border: 2px solid #555;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: all 0.2s;
+}
+
+#menu-btn:hover {
+    background-color: #4d3e36;
+    border-color: #a39485;
+}
+
+/* --- TOOLS SECTION --- */
+.controls-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.tools-container {
+    display: flex;
+    gap: 10px;
+}
+
+.tool-btn {
+    background-color: #261e16;
+    border: 3px solid #3d2e23;
+    color: white;
+    padding: 10px;
+    font-size: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s;
+}
+
+.tool-btn:hover {
+    background-color: #3d2e23;
+    border-color: #a39485;
+}
+
+/* Yellow border for the active tool  */
+.tool-btn.active-tool {
+    border-color: #e2c08d; 
+    background-color: #3d2e23;
+}
+
+#reset-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: 3px solid #3d2e23;
+    padding: 10px;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: auto; /* Pushes button to the right */
+    transition: all 0.2s;
+}
+
+#reset-btn:hover {
+    background-color: #c0392b;
+}
+
+/* --- WORLD GRID --- */
+#game-grid {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr); /* 20 columns */
+    grid-template-rows: repeat(12, 1fr);    /* 12 rows */
+    border: 4px solid #3d2e23;
+    flex-grow: 1;
+    min-height: 400px;
+    background-color: #5fb6eb; /* Light blue for the sky */
+}
+
+.tile {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    image-rendering: pixelated;
+    border: 0.1px solid rgba(255, 255, 255, 0.05); /* Very faint grid lines */
+}
+
+/* Block Textures */
+.grass-block { 
+    background: linear-gradient(135deg, #7cb342, #558b2f);
+}
+
+.dirt-block { 
+    background: linear-gradient(45deg, #8d6e63, #6d4c41);
+}
+
+.stone-block { 
+    background: radial-gradient(circle, #888, #616161);
+}
+
+.wood-block { 
+    background: linear-gradient(0deg, #a1887f, #8d6e63);
+}
+
+.leaf-block { 
+    background: radial-gradient(circle, #7cb342, #33691e);
+}
+.sky { background: transparent; }
+
+/* --- INVENTORY SECTION --- */
+#inventory-container {
+    background-color: #261e16;
+    border: 3px solid #3d2e23;
+    padding: 15px;
+    margin-top: 15px;
+    color: #a39485;
+}
+
+#inventory-container h3 {
+    color: #76ba3f;
+    font-size: 10px;
+    margin: 0 0 10px 0;
+}
+
+.inventory-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.inventory-slot {
+    background-color: #3d2e23;
+    border: 2px solid #555;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: border-color 0.2s;
+}
+
+.inventory-slot:hover {
+    border-color: #a39485;
+}
+
+.inventory-slot.selected-slot {
+    border-color: #76ba3f;
+    background-color: #4d3e36;
+    box-shadow: 0 0 8px rgba(118, 186, 63, 0.5);
+}
+
+.inv-icon {
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inv-icon.grass-block {
+    background: #7cb342;
+}
+
+.inv-icon.dirt-block {
+    background: #8d6e63;
+}
+
+.inv-icon.stone-block {
+    background: #757575;
+}
+
+.inv-icon.wood-block {
+    background: #a1887f;
+}
+
+.inv-icon.leaf-block {
+    background: #558b2f;
+}
+
+.inv-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+}
+
+.inv-count {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    color: #ffffff;
+    font-size: 7px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+
+
+/* INVENTORY BAR (Bottom) */
+#inventory-container {
+    background-color: #261e16;
+    border: 4px solid #3d2e23;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+#inventory-container h3 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #a39485;
+}
+
+.inventory-list {
+    display: flex;
+    gap: 15px;
+}
+
+.inventory-slot {
+    display: flex;
+    align-items: center;
+    background-color: #3d2e23;
+    border: 2px solid #555;
+    padding: 5px 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.inventory-slot.selected-slot {
+    border-color: #76ba3f; /* Highlight when choosing a block to place */
+}
+
+/* The small square representing the block in inventory */
+.inv-icon {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.inv-name {
+    color: white;
+    font-size: 8px;
+}
+
+/* The orange multiplier box X */
+.inv-count {
+    background-color: #d3832b;
+    color: #1a1510;
+    padding: 2px 5px;
+    font-size: 10px;
+    font-weight: bold;
+}

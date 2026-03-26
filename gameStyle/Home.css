@@ -1,4 +1,4 @@
-/* --- LANDING PAGE STYLES --- */
+/*  LANDING PAGE STYLES  */
 #welcome-screen {
     background-color: #1a1510; /*  dark brown background */
     display: flex;
@@ -87,7 +87,7 @@
     background-size: cover;
 }
 
-/* --- GLOBAL STYLES --- */
+/*  GLOBAL STYLES  */
 * {
     margin: 0;
     padding: 0;

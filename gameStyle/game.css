@@ -1,4 +1,4 @@
-/* --- MAIN GAME CONTAINER --- */
+/*  MAIN GAME CONTAINER */
 #game-screen {
     background-color: #1a1510; /* Dark brown background from your image */
     color: #a39485;
@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-/* --- HEADER AREA --- */
+/*  HEADER AREA  */
 .game-header {
     display: flex;
     justify-content: space-between;
@@ -38,7 +38,7 @@
     border-color: #a39485;
 }
 
-/* --- TOOLS SECTION --- */
+/*  TOOLS SECTION  */
 .controls-bar {
     display: flex;
     align-items: center;
@@ -90,7 +90,7 @@
     background-color: #c0392b;
 }
 
-/* --- WORLD GRID --- */
+/*  WORLD GRID  */
 #game-grid {
     display: grid;
     grid-template-columns: repeat(20, 1fr); /* 20 columns */
@@ -131,7 +131,7 @@
 }
 .sky { background: transparent; }
 
-/* --- INVENTORY SECTION --- */
+/*  INVENTORY SECTION  */
 #inventory-container {
     background-color: #261e16;
     border: 3px solid #3d2e23;

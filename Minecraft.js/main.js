@@ -1,7 +1,7 @@
 
 // IMPORT البيانات الأساسية
 
-import { INITIAL_MAP, Block_TYPES } from './constants.js';
+import { INITIAL_MAP, TILE_TYPES } from './constants.js';
 //  الخريطة الأصلية للعبة (2D array)
 //  أسماء أنواع البلاطات (مثل grass, dirt, stone blocks
 

@@ -1,43 +1,53 @@
-# How Blocks Connect Between CSS and JavaScript
+# Block Game
 
-# Idea
-Blocks in the game are styled using CSS classes that are added from JavaScript.
+## Idea
+A simple block game where you can mine and place blocks.
 
+---
 
-# 1. JavaScript Side (Adding Classes)
+## How Blocks Work
 
-In JavaScript, each tile gets a class name like this:
+JavaScript gives each block a class:
 
+```js
 tile.className = "tile " + type;
+```
 
-e.g:
-# code:
-tile.className = "tile " + type;
+Example:
+```js
+type = "grass-block";
+```
 
-# js:
-type = "grass-block"
+HTML:
+```html
+<div class="tile grass-block"></div>
+```
 
-# HTML:
-  <div class="tile grass-block"  /div>
+CSS controls how blocks look:
 
+```css
+.grass-block { background: green; }
+.stone-block { background: gray; }
+.wood-block { background: brown; }
+.sky { background: lightblue; }
+```
 
--------------------------------------------------------
+---
 
-# How Mining Works
+## Mining
 
-When you click on a block, the game checks the selected tool and the block type.
+Click a block to mine it using tools.
 
-Each tool can only break specific blocks:
+Tools:
+- Axe → wood
+- Pickaxe → stone
+- Shovel → dirt/grass
 
- Axe → wood blocks  
- Pickaxe → stone blocks  
- Shovel → dirt and grass blocks  
+---
 
+## Code
 
-
-# Code Example
-
-# js  e.g:
+```js
 if (currentTool) {
     if (
         (currentTool === "axe" && type === "wood-block") ||
@@ -51,3 +61,9 @@ if (currentTool) {
         renderInventory();
     }
 }
+```
+
+---
+
+
+- You can mine and place blocks  

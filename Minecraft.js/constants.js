@@ -12,5 +12,4 @@ export const INITIAL_MAP = [
     [2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2]
 ];
 
-// These are the types of tiles in the game, corresponding to the numbers in INITIAL_MAP
 export const TILE_TYPES = ["sky", "grass-block", "dirt-block", "stone-block", "wood-block", "leaf-block"];

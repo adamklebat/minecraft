@@ -12,4 +12,4 @@ export const INITIAL_MAP = [
     [2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2]
 ];
 
-export const TILE_TYPES = ["sky", "grass-block", "dirt-block", "stone-block", "wood-block", "leaf-block"];  
+export const Blocks_TYPES = ["sky", "grass-block", "dirt-block", "stone-block", "wood-block", "leaf-block"];  

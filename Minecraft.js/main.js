@@ -2,8 +2,8 @@
 // IMPORT البيانات الأساسية
 
 import { INITIAL_MAP, TILE_TYPES } from './constants.js';
-// INITIAL_MAP = الخريطة الأصلية للعبة (2D array)
-// TILE_TYPES = أسماء أنواع البلاطات (مثل "grass-block", "dirt-block", "stone-block"...)
+//  الخريطة الأصلية للعبة (2D array)
+//  أسماء أنواع البلاطات (مثل grass, dirt, stone blocks
 
 
 // STATE (حالة اللعبة)
@@ -60,16 +60,20 @@ function renderWorld() {
 }
 
 
-// CLICK TILE (التعامل مع الضغط على البلاطة)
+// CLICK  (التعامل مع الضغط على البلاطة)
 
 function handleTileClick(e) {
     const r = e.target.dataset.row;  // الصف
     const c = e.target.dataset.col;  // العمود
     const type = TILE_TYPES[worldData[r][c]]; // نوع البلاطة
 
+    
+    console.log("tile clicked:", type);
+
+    
     //  Mining (إذا اللاعب يحمل أداة)
     if (currentTool) {
-        // تحقق من قواعد كسر البلاطات حسب الأداة
+        //  قواعد كسر البلاطات حسب الأداة
         if (
             (currentTool === "axe" && type === "wood-block") ||
             (currentTool === "pickaxe" && type === "stone-block") ||

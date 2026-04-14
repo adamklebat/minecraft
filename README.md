@@ -18,7 +18,7 @@ tile.className = "tile " + type;
 type = "grass-block"
 
 # HTML:
-<div class="tile grass-block"></div> .
+ <!-- <div class="tile grass-block"></div> -->
 
 
 -------------------------------------------------------

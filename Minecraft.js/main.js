@@ -8,8 +8,8 @@ import { INITIAL_MAP, TILE_TYPES } from './constants.js';
 
 // STATE (حالة اللعبة)
 
-let worldData = [];      // نسخة الخريطة التي نلعب عليها (تتغير أثناء اللعب)
-let inventory = [];      // مخزون اللاعب
+let world = [];      // نسخة الخريطة التي نلعب عليها (تتغير أثناء اللعب)
+let inv = [];      // مخزون اللاعب
 let currentTool = null;  // الأداة المختارة (axe, pickaxe, shovel)
 let currentBlock = null; // البلاطة المختارة لو اللاعب يريد وضعها في العالم
 
